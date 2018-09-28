@@ -1,0 +1,236 @@
+2018-08-11 15:40:10,167 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=uploadimage params(post):{'dict': {'action': ['uploadimage']}}
+2018-08-11 15:54:59,523 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=uploadimage params(post):{'dict': {'action': ['uploadimage']}}
+2018-08-11 15:56:17,288 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=uploadimage params(post):{'dict': {'action': ['uploadimage']}}
+2018-08-11 15:57:05,135 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=uploadimage params(post):{'dict': {'action': ['uploadimage']}}
+2018-08-11 15:58:37,629 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-08-11 15:59:27,800 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-08-11 16:00:16,265 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-08-11 16:01:46,216 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-08-11 16:01:46,297 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-08-11 16:10:16,173 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=uploadimage params(post):{'dict': {'action': ['uploadimage']}}
+2018-08-11 16:10:16,223 log_helper.py[line:13] INFO url:/upload/20180811/201808111610167i5RG.jpeg ip:127.0.0.1
+2018-08-11 16:10:52,359 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-08-11 16:10:52,373 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'content': ['<p><img src="/upload/20180811/201808111610167i5RG.jpeg" title="201808111610167i5RG.jpeg" alt="201808111610167i5RG.jpeg"/></p>'], 'front_cover_img': ['/upload/20180811/201808111610528vf2E.jpeg']}}
+2018-08-11 16:10:52,622 log_helper.py[line:13] INFO sql:update infomation set front_cover_img=%s, content=%s where id=1
+2018-08-11 16:15:27,687 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-08-11 16:15:27,763 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-08-11 16:15:27,777 log_helper.py[line:13] INFO url:/upload/20180811/201808111610167i5RG.jpeg ip:127.0.0.1
+2018-08-11 16:15:27,784 log_helper.py[line:13] INFO url:/upload/20180811/201808111610528vf2E.jpeg ip:127.0.0.1
+2018-08-11 16:16:12,257 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['81as']}}
+2018-08-11 16:16:12,328 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-08-11 16:16:12,328 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='E10ADC3949BA59ABBE56E057F20F883E'"
+2018-08-11 16:16:12,331 log_helper.py[line:13] INFO sql:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-08-11 16:16:12,332 log_helper.py[line:23] INFO sql生成失败:('connection already closed',) query:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+Traceback (most recent call last):
+  File "e:\Python\CompanyWeb\common\db_helper.py", line 86, in get_sql
+    self.cursor = self.connect.cursor()
+psycopg2.InterfaceError: connection already closed
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:75)->db_helper.py(get_sql:91)->log_helper.py(error:20)->
+
+2018-08-11 16:16:12,729 log_helper.py[line:13] INFO run time: 0.39716323085883687 s sql: update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-08-11 16:16:12,987 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-08-11 16:16:13,074 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-08-11 16:16:13,093 log_helper.py[line:13] INFO url:/upload/20180811/201808111610528vf2E.jpeg ip:127.0.0.1
+2018-08-11 16:16:13,105 log_helper.py[line:13] INFO url:/upload/20180811/201808111610167i5RG.jpeg ip:127.0.0.1
+2018-08-13 09:28:07,758 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['hceq']}}
+2018-08-13 09:28:14,116 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['6x2b']}}
+2018-08-13 09:28:14,238 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-08-13 09:28:14,238 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='E10ADC3949BA59ABBE56E057F20F883E'"
+2018-08-13 09:28:14,299 log_helper.py[line:13] INFO sql:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-08-13 09:28:14,300 log_helper.py[line:23] INFO sql生成失败:('connection already closed',) query:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+Traceback (most recent call last):
+  File "e:\Python\CompanyWeb\common\db_helper.py", line 86, in get_sql
+    self.cursor = self.connect.cursor()
+psycopg2.InterfaceError: connection already closed
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:75)->db_helper.py(get_sql:91)->log_helper.py(error:20)->
+
+2018-08-13 09:28:15,053 log_helper.py[line:13] INFO run time: 0.7526103295993073 s sql: update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-08-13 09:28:15,638 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-08-13 09:28:15,709 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-08-13 09:28:15,786 log_helper.py[line:13] INFO url:/upload/20180811/201808111610528vf2E.jpeg ip:127.0.0.1
+2018-08-13 09:28:15,830 log_helper.py[line:13] INFO url:/upload/20180811/201808111610167i5RG.jpeg ip:127.0.0.1
+2018-08-13 09:28:28,688 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=config&&noCache=1534123708685
+2018-08-13 09:30:02,943 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=config&&noCache=1534123802941
+2018-08-15 16:13:08,918 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['xdnz']}}
+2018-08-15 16:13:09,863 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-08-15 16:13:09,863 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='E10ADC3949BA59ABBE56E057F20F883E'"
+2018-08-15 16:15:27,652 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['xdnz']}}
+2018-08-15 16:15:35,244 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['huex']}}
+2018-08-15 16:15:35,329 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-08-15 16:15:35,329 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='E10ADC3949BA59ABBE56E057F20F883E'"
+2018-08-15 16:15:35,347 log_helper.py[line:13] INFO sql:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-08-15 16:15:35,347 log_helper.py[line:23] INFO sql生成失败:('connection already closed',) query:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+Traceback (most recent call last):
+  File "e:\Python\CompanyWeb\common\db_helper.py", line 86, in get_sql
+    self.cursor = self.connect.cursor()
+psycopg2.InterfaceError: connection already closed
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:75)->db_helper.py(get_sql:91)->log_helper.py(error:20)->
+
+2018-08-15 16:15:35,864 log_helper.py[line:13] INFO run time: 0.5170968402103426 s sql: update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-08-15 16:15:36,408 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-08-15 16:15:36,501 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-08-15 16:15:36,601 log_helper.py[line:13] INFO run time: 0.1001283273834872 s sql: select * from infomation where id = 1
+2018-08-15 16:15:36,619 log_helper.py[line:13] INFO url:/upload/20180811/201808111610528vf2E.jpeg ip:127.0.0.1
+2018-08-15 16:15:36,701 log_helper.py[line:13] INFO url:/upload/20180811/201808111610167i5RG.jpeg ip:127.0.0.1
+2018-08-15 16:15:51,834 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=config&&noCache=1534320951832
+2018-08-15 16:16:01,818 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=config&&noCache=1534320961816
+2018-09-26 16:27:57,925 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-26 16:32:31,333 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-26 16:32:49,068 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-26 16:33:10,629 log_helper.py[line:13] INFO url:/main.html ip:127.0.0.1
+2018-09-26 16:34:08,116 log_helper.py[line:13] INFO url:/index.html ip:127.0.0.1
+2018-09-26 16:34:47,260 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['sjdm']}}
+2018-09-26 16:34:47,424 log_helper.py[line:23] INFO 连接数据库失败：('FATAL:  database "simple_db" does not exist\n',)
+Traceback (most recent call last):
+  File "i:\Python\CompanyWeb\common\db_helper.py", line 29, in open_conn
+    host=self.db_host, port=self.db_port)
+  File "E:\Anaconda3\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  database "simple_db" does not exist
+
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:40)->db_helper.py(__enter__:52)->db_helper.py(open_conn:32)->log_helper.py(error:20)->
+
+2018-09-26 16:34:48,118 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-09-26 16:34:48,118 log_helper.py[line:23] INFO sql生成失败:("'NoneType' object has no attribute 'cursor'",) query:select * from manager where login_name=%s and login_password=%s
+Traceback (most recent call last):
+  File "i:\Python\CompanyWeb\common\db_helper.py", line 86, in get_sql
+    self.cursor = self.connect.cursor()
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:43)->db_helper.py(get_sql:91)->log_helper.py(error:20)->
+
+2018-09-26 16:36:01,052 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['fqky']}}
+2018-09-26 16:36:01,136 log_helper.py[line:23] INFO 连接数据库失败：('FATAL:  database "simple_db" does not exist\n',)
+Traceback (most recent call last):
+  File "i:\Python\CompanyWeb\common\db_helper.py", line 29, in open_conn
+    host=self.db_host, port=self.db_port)
+  File "E:\Anaconda3\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  database "simple_db" does not exist
+
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:40)->db_helper.py(__enter__:52)->db_helper.py(open_conn:32)->log_helper.py(error:20)->
+
+2018-09-26 16:36:01,618 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-09-26 16:36:01,619 log_helper.py[line:23] INFO sql生成失败:("'NoneType' object has no attribute 'cursor'",) query:select * from manager where login_name=%s and login_password=%s
+Traceback (most recent call last):
+  File "i:\Python\CompanyWeb\common\db_helper.py", line 86, in get_sql
+    self.cursor = self.connect.cursor()
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:43)->db_helper.py(get_sql:91)->log_helper.py(error:20)->
+
+2018-09-26 16:36:32,859 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['e7xa']}}
+2018-09-26 16:36:32,897 log_helper.py[line:23] INFO 连接数据库失败：('FATAL:  database "simple_db" does not exist\n',)
+Traceback (most recent call last):
+  File "i:\Python\CompanyWeb\common\db_helper.py", line 29, in open_conn
+    host=self.db_host, port=self.db_port)
+  File "E:\Anaconda3\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  database "simple_db" does not exist
+
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:40)->db_helper.py(__enter__:52)->db_helper.py(open_conn:32)->log_helper.py(error:20)->
+
+2018-09-26 16:36:33,170 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-09-26 16:36:33,170 log_helper.py[line:23] INFO sql生成失败:("'NoneType' object has no attribute 'cursor'",) query:select * from manager where login_name=%s and login_password=%s
+Traceback (most recent call last):
+  File "i:\Python\CompanyWeb\common\db_helper.py", line 86, in get_sql
+    self.cursor = self.connect.cursor()
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:43)->db_helper.py(get_sql:91)->log_helper.py(error:20)->
+
+2018-09-26 16:38:16,362 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['e7xa']}}
+2018-09-26 16:52:11,041 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['z8wo']}}
+2018-09-26 16:52:17,128 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['chzk']}}
+2018-09-26 16:52:17,259 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-09-26 16:52:17,260 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='E10ADC3949BA59ABBE56E057F20F883E'"
+2018-09-26 16:52:17,276 log_helper.py[line:23] INFO sql执行失败:('relation "manager" does not exist\nLINE 1: select * from manager where login_name=\'admin\' and login_pas...\n                      ^\n',) query:b"select * from manager where login_name='admin' and login_password='E10ADC3949BA59ABBE56E057F20F883E'"
+Traceback (most recent call last):
+  File "i:\Python\CompanyWeb\common\db_helper.py", line 137, in execute
+    result = self.cursor.execute(query, vars)
+psycopg2.ProgrammingError: relation "manager" does not exist
+LINE 1: select * from manager where login_name='admin' and login_pas...
+                      ^
+
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:43)->db_helper.py(execute:141)->log_helper.py(error:20)->
+
+2018-09-26 17:20:12,133 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['h2uz']}}
+2018-09-26 17:20:12,255 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-09-26 17:20:12,255 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='E10ADC3949BA59ABBE56E057F20F883E'"
+2018-09-26 17:20:12,273 log_helper.py[line:13] INFO sql:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-09-26 17:20:12,273 log_helper.py[line:23] INFO sql生成失败:('connection already closed',) query:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+Traceback (most recent call last):
+  File "i:\Python\CompanyWeb\common\db_helper.py", line 86, in get_sql
+    self.cursor = self.connect.cursor()
+psycopg2.InterfaceError: connection already closed
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:75)->db_helper.py(get_sql:91)->log_helper.py(error:20)->
+
+2018-09-26 17:20:12,618 log_helper.py[line:13] INFO run time: 0.34573736861034376 s sql: update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-09-26 17:20:12,997 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-09-26 17:20:13,043 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-09-26 17:37:05,259 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-09-26 17:37:05,303 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-09-26 17:37:29,134 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=config&&noCache=1537954649132
+2018-09-26 17:37:38,194 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-09-26 17:37:38,316 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-09-26 18:01:50,887 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['h2uz']}}
+2018-09-27 14:17:41,971 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-27 14:18:19,338 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-27 14:18:20,345 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-27 14:18:21,081 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-27 14:47:53,786 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-27 15:23:51,743 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['12345'], 'verify': ['uo2k']}}
+2018-09-27 15:23:52,016 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-09-27 15:23:52,017 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='827CCB0EEA8A706C4C34A16891F84E7B'"
+2018-09-27 15:24:02,566 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['12345'], 'verify': ['xw2e']}}
+2018-09-27 15:24:02,607 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-09-27 15:24:02,607 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='827CCB0EEA8A706C4C34A16891F84E7B'"
+2018-09-27 15:24:16,342 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['kayz']}}
+2018-09-27 15:24:25,830 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['akqb']}}
+2018-09-27 15:24:25,966 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-09-27 15:24:25,966 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='E10ADC3949BA59ABBE56E057F20F883E'"
+2018-09-27 15:24:26,000 log_helper.py[line:13] INFO sql:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-09-27 15:24:26,001 log_helper.py[line:23] INFO sql生成失败:('connection already closed',) query:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+Traceback (most recent call last):
+  File "i:\Python\CompanyWeb\common\db_helper.py", line 86, in get_sql
+    self.cursor = self.connect.cursor()
+psycopg2.InterfaceError: connection already closed
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:75)->db_helper.py(get_sql:91)->log_helper.py(error:20)->
+
+2018-09-27 15:24:27,089 log_helper.py[line:13] INFO run time: 1.0888228702375784 s sql: update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-09-27 15:24:27,477 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-09-27 15:24:27,520 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-09-27 15:24:33,121 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-09-27 15:24:33,166 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-09-27 15:25:01,333 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['2xjc']}}
+2018-09-27 15:25:01,374 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-09-27 15:25:01,375 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='E10ADC3949BA59ABBE56E057F20F883E'"
+2018-09-27 15:25:01,378 log_helper.py[line:13] INFO sql:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-09-27 15:25:01,379 log_helper.py[line:23] INFO sql生成失败:('connection already closed',) query:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+Traceback (most recent call last):
+  File "i:\Python\CompanyWeb\common\db_helper.py", line 86, in get_sql
+    self.cursor = self.connect.cursor()
+psycopg2.InterfaceError: connection already closed
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:75)->db_helper.py(get_sql:91)->log_helper.py(error:20)->
+
+2018-09-27 15:25:01,906 log_helper.py[line:13] INFO run time: 0.5277581577561676 s sql: update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-09-27 15:25:02,085 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-09-27 15:25:02,129 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-09-27 15:54:32,468 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-09-27 15:54:32,806 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-09-27 15:54:33,015 log_helper.py[line:13] INFO run time: 0.20919286911475865 s sql: select * from infomation where id = 1
+2018-09-27 15:54:33,575 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-09-27 15:54:33,617 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-09-27 15:54:41,217 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-09-27 15:54:41,340 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-09-27 16:07:47,639 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=config&&noCache=1538035667627
