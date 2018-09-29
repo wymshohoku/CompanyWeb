@@ -1,5 +1,6 @@
 # coding=utf-8
 
+import platform
 import json
 import re
 import urllib.parse
@@ -10,7 +11,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 def create_verify_code(length = 4, size=(100, 40), img_type='jpg',
                         mode='RGB', bg_color=(255, 255, 255), fg_color=(0, 0, 255),
-                        font_size=19, font_type='arial.ttf',
+                        font_size=19, font_type='/Library/Fonts/arial.ttf',
                         draw_lines=True, n_line=(2, 5),
                         draw_points=True, point_chance=5):
     """
@@ -52,6 +53,8 @@ def create_verify_code(length = 4, size=(100, 40), img_type='jpg',
     def create_strs():
         c_chars = random_helper.get_string(length)
         strs = ' %s ' % ' '.join(c_chars)
+        if platform.system() == "Windows":
+            font_type = 'arial.ttf'
         font = ImageFont.truetype(font_type, font_size)
         font_width, font_height = font.getsize(strs)
         draw.text(((width - font_width) / 3, (height - font_height) / 3),

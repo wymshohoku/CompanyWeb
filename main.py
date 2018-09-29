@@ -1,5 +1,6 @@
 # coding=utf-8
 
+import platform
 import bottle
 import sys
 import os
@@ -46,9 +47,12 @@ logging.basicConfig(level=logging.INFO,
 session_opts = {
     'session.type': 'file',
     'session.cookie_expires': 3600,
-    'session.data_dir': 'C:\\WINDOWS\\Temp\\sessions\\simple',
+    'session.data_dir': '/Users/wangyangmei/Work/Python/CompanyWeb',
     'session.auto': True
 }
+
+if platform.system() == 'Windows':
+    session_opts['session.data_dir'] = 'C:\\WINDOWS\\Temp\\sessions\\simple'
 
 @hook('before_request')
 def validate():
