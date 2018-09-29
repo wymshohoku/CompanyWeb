@@ -234,3 +234,23 @@ psycopg2.InterfaceError: connection already closed
 2018-09-27 15:54:41,217 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
 2018-09-27 15:54:41,340 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
 2018-09-27 16:07:47,639 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=config&&noCache=1538035667627
+2018-09-29 16:52:05,753 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['grvt']}}
+2018-09-29 16:52:06,083 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-09-29 16:52:06,084 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='E10ADC3949BA59ABBE56E057F20F883E'"
+2018-09-29 16:52:34,928 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['wug2']}}
+2018-09-29 16:52:41,229 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['wtxy']}}
+2018-09-29 16:52:41,267 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-09-29 16:52:41,268 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='E10ADC3949BA59ABBE56E057F20F883E'"
+2018-09-29 16:52:41,271 log_helper.py[line:13] INFO sql:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-09-29 16:52:41,271 log_helper.py[line:23] INFO sql生成失败:('connection already closed',) query:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+Traceback (most recent call last):
+  File "i:\Python\CompanyWeb\common\db_helper.py", line 86, in get_sql
+    self.cursor = self.connect.cursor()
+psycopg2.InterfaceError: connection already closed
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:75)->db_helper.py(get_sql:91)->log_helper.py(error:20)->
+
+2018-09-29 16:52:42,265 log_helper.py[line:13] INFO run time: 0.9942980644583344 s sql: update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-09-29 16:52:42,702 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-09-29 16:52:42,742 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-09-29 18:15:46,779 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=config&&noCache=1538216146729
