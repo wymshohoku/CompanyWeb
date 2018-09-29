@@ -1,0 +1,1 @@
+INSERT INTO manager(login_name, login_password, is_enable) VALUES ('admin', 'E10ADC3949BA59ABBE56E057F20F883E', 1);
