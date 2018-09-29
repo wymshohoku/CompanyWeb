@@ -254,3 +254,197 @@ psycopg2.InterfaceError: connection already closed
 2018-09-29 16:52:42,702 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
 2018-09-29 16:52:42,742 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
 2018-09-29 18:15:46,779 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=config&&noCache=1538216146729
+2018-09-29 21:18:49,886 log_helper.py[line:13] INFO url:/main.html ip:127.0.0.1
+2018-09-29 21:18:59,342 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-29 21:18:59,452 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-29 21:22:30,492 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-29 21:24:50,313 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-29 21:24:53,141 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-29 21:24:54,074 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-29 21:25:04,294 log_helper.py[line:13] INFO url:/main.html ip:127.0.0.1
+2018-09-29 21:25:04,384 log_helper.py[line:13] INFO url:/main.html ip:127.0.0.1
+2018-09-29 21:25:12,090 log_helper.py[line:13] INFO url:/index.html ip:127.0.0.1
+2018-09-29 21:26:14,177 log_helper.py[line:13] INFO url:/index.html ip:127.0.0.1
+2018-09-29 21:26:14,908 log_helper.py[line:13] INFO url:/index.html ip:127.0.0.1
+2018-09-29 21:26:15,076 log_helper.py[line:13] INFO url:/index.html ip:127.0.0.1
+2018-09-29 21:26:15,251 log_helper.py[line:13] INFO url:/index.html ip:127.0.0.1
+2018-09-29 21:26:15,420 log_helper.py[line:13] INFO url:/index.html ip:127.0.0.1
+2018-09-29 21:27:52,790 log_helper.py[line:13] INFO url:/index.html ip:127.0.0.1
+2018-09-29 21:28:00,997 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-29 21:28:02,185 log_helper.py[line:13] INFO url:/login.html ip:127.0.0.1
+2018-09-29 21:28:53,476 log_helper.py[line:23] INFO ('cannot open resource',)
+Traceback (most recent call last):
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/api/verify.py", line 12, in get_verify
+    code_img, verify_code = verify_helper.create_verify_code()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 65, in create_verify_code
+    strs = create_strs()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 55, in create_strs
+    font = ImageFont.truetype(font_type, font_size)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 261, in truetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 144, in __init__
+    self.font = core.getfont(font, size, index, encoding, layout_engine=layout_engine)
+OSError: cannot open resource
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->verify.py(get_verify:26)->log_helper.py(error:20)->
+
+2018-09-29 21:28:56,779 log_helper.py[line:23] INFO ('cannot open resource',)
+Traceback (most recent call last):
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/api/verify.py", line 12, in get_verify
+    code_img, verify_code = verify_helper.create_verify_code()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 65, in create_verify_code
+    strs = create_strs()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 55, in create_strs
+    font = ImageFont.truetype(font_type, font_size)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 261, in truetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 144, in __init__
+    self.font = core.getfont(font, size, index, encoding, layout_engine=layout_engine)
+OSError: cannot open resource
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->verify.py(get_verify:26)->log_helper.py(error:20)->
+
+2018-09-29 21:28:57,688 log_helper.py[line:23] INFO ('cannot open resource',)
+Traceback (most recent call last):
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/api/verify.py", line 12, in get_verify
+    code_img, verify_code = verify_helper.create_verify_code()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 65, in create_verify_code
+    strs = create_strs()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 55, in create_strs
+    font = ImageFont.truetype(font_type, font_size)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 261, in truetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 144, in __init__
+    self.font = core.getfont(font, size, index, encoding, layout_engine=layout_engine)
+OSError: cannot open resource
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->verify.py(get_verify:26)->log_helper.py(error:20)->
+
+2018-09-29 21:28:58,688 log_helper.py[line:23] INFO ('cannot open resource',)
+Traceback (most recent call last):
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/api/verify.py", line 12, in get_verify
+    code_img, verify_code = verify_helper.create_verify_code()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 65, in create_verify_code
+    strs = create_strs()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 55, in create_strs
+    font = ImageFont.truetype(font_type, font_size)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 261, in truetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 144, in __init__
+    self.font = core.getfont(font, size, index, encoding, layout_engine=layout_engine)
+OSError: cannot open resource
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->verify.py(get_verify:26)->log_helper.py(error:20)->
+
+2018-09-29 21:28:58,871 log_helper.py[line:23] INFO ('cannot open resource',)
+Traceback (most recent call last):
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/api/verify.py", line 12, in get_verify
+    code_img, verify_code = verify_helper.create_verify_code()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 65, in create_verify_code
+    strs = create_strs()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 55, in create_strs
+    font = ImageFont.truetype(font_type, font_size)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 261, in truetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 144, in __init__
+    self.font = core.getfont(font, size, index, encoding, layout_engine=layout_engine)
+OSError: cannot open resource
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->verify.py(get_verify:26)->log_helper.py(error:20)->
+
+2018-09-29 21:29:13,638 log_helper.py[line:23] INFO ('cannot open resource',)
+Traceback (most recent call last):
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/api/verify.py", line 12, in get_verify
+    code_img, verify_code = verify_helper.create_verify_code()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 65, in create_verify_code
+    strs = create_strs()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 55, in create_strs
+    font = ImageFont.truetype(font_type, font_size)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 261, in truetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 144, in __init__
+    self.font = core.getfont(font, size, index, encoding, layout_engine=layout_engine)
+OSError: cannot open resource
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->verify.py(get_verify:26)->log_helper.py(error:20)->
+
+2018-09-29 21:29:14,211 log_helper.py[line:23] INFO ('cannot open resource',)
+Traceback (most recent call last):
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/api/verify.py", line 12, in get_verify
+    code_img, verify_code = verify_helper.create_verify_code()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 65, in create_verify_code
+    strs = create_strs()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 55, in create_strs
+    font = ImageFont.truetype(font_type, font_size)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 261, in truetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 144, in __init__
+    self.font = core.getfont(font, size, index, encoding, layout_engine=layout_engine)
+OSError: cannot open resource
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->verify.py(get_verify:26)->log_helper.py(error:20)->
+
+2018-09-29 21:29:14,623 log_helper.py[line:23] INFO ('cannot open resource',)
+Traceback (most recent call last):
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/api/verify.py", line 12, in get_verify
+    code_img, verify_code = verify_helper.create_verify_code()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 65, in create_verify_code
+    strs = create_strs()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 55, in create_strs
+    font = ImageFont.truetype(font_type, font_size)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 261, in truetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 144, in __init__
+    self.font = core.getfont(font, size, index, encoding, layout_engine=layout_engine)
+OSError: cannot open resource
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->verify.py(get_verify:26)->log_helper.py(error:20)->
+
+2018-09-29 21:29:14,843 log_helper.py[line:23] INFO ('cannot open resource',)
+Traceback (most recent call last):
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/api/verify.py", line 12, in get_verify
+    code_img, verify_code = verify_helper.create_verify_code()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 65, in create_verify_code
+    strs = create_strs()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 55, in create_strs
+    font = ImageFont.truetype(font_type, font_size)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 261, in truetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 144, in __init__
+    self.font = core.getfont(font, size, index, encoding, layout_engine=layout_engine)
+OSError: cannot open resource
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->verify.py(get_verify:26)->log_helper.py(error:20)->
+
+2018-09-29 21:29:15,285 log_helper.py[line:23] INFO ('cannot open resource',)
+Traceback (most recent call last):
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/api/verify.py", line 12, in get_verify
+    code_img, verify_code = verify_helper.create_verify_code()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 65, in create_verify_code
+    strs = create_strs()
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/verify_helper.py", line 55, in create_strs
+    font = ImageFont.truetype(font_type, font_size)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 261, in truetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "/anaconda3/lib/python3.6/site-packages/PIL/ImageFont.py", line 144, in __init__
+    self.font = core.getfont(font, size, index, encoding, layout_engine=layout_engine)
+OSError: cannot open resource
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->verify.py(get_verify:26)->log_helper.py(error:20)->
+
+2018-09-29 21:29:56,700 log_helper.py[line:13] INFO url:/verify.html ip:127.0.0.1
+2018-09-29 21:48:44,999 log_helper.py[line:13] INFO url:/api/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'username': ['admin'], 'password': ['123456'], 'verify': ['rko9']}}
+2018-09-29 21:48:45,102 log_helper.py[line:13] INFO sql:select * from manager where login_name=%s and login_password=%s
+2018-09-29 21:48:45,104 log_helper.py[line:13] INFO sql:b"select * from manager where login_name='admin' and login_password='E10ADC3949BA59ABBE56E057F20F883E'"
+2018-09-29 21:48:45,177 log_helper.py[line:13] INFO sql:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+2018-09-29 21:48:45,179 log_helper.py[line:23] INFO sql生成失败:('connection already closed',) query:update manager set last_login_time=%s, last_login_ip=%s, login_count=login_count+1 where id=%s
+Traceback (most recent call last):
+  File "/Users/wangyangmei/Work/Python/CompanyWeb/common/db_helper.py", line 86, in get_sql
+    self.cursor = self.connect.cursor()
+psycopg2.InterfaceError: connection already closed
+
+程序调用堆栈的日志：main.py(<module>:110)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:238)->socketserver.py(_handle_request_noblock:317)->socketserver.py(process_request:348)->socketserver.py(finish_request:361)->socketserver.py(__init__:696)->simple_server.py(handle:133)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->login.py(post_login:75)->db_helper.py(get_sql:91)->log_helper.py(error:20)->
+
+2018-09-29 21:48:48,504 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-09-29 21:48:48,510 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
+2018-09-29 21:49:05,354 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=config&&noCache=1538228945352
