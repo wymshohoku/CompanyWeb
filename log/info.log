@@ -448,3 +448,5 @@ psycopg2.InterfaceError: connection already closed
 2018-09-29 21:48:48,504 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
 2018-09-29 21:48:48,510 log_helper.py[line:13] INFO sql:select * from infomation where id = 1
 2018-09-29 21:49:05,354 log_helper.py[line:13] INFO url:/api/files/ ip:127.0.0.1 params(get):action=config&&noCache=1538228945352
+2018-09-30 16:24:44,008 log_helper.py[line:13] INFO url:/api/about/ ip:127.0.0.1
+2018-09-30 16:24:44,134 log_helper.py[line:13] INFO sql:select * from infomation where id = 1

@@ -1,3 +1,4 @@
 .vscode/settings.json
 *.pyc
+log/*
 数据字典与sql语句生成工具/.DS_Store
